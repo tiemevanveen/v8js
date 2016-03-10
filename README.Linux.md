@@ -83,3 +83,36 @@ make
 make test
 sudo make install
 ```
+
+Check
+-----------------------
+
+Check if the extension is found and enabled. 
+
+Something like this should be listed in your phpinfo();
+
+```
++-------------------------------------------+
+|                   v8js                    |
++------------------------------+------------+
+|  V8 Javascript Engine        |   enabled  |
++-----------------------------------------+
+|  V8 Engine Compiled Version  |   x.x.x    |
++-----------------------------------------+
+|  V8 Engine Linked Version    |   x.x.x    |
++-----------------------------------------+
+|  Version                     |   x.x.x    |
++------------------------------+------------+
+```
+
+And something like this for CLI:
+
+```bash
+$ php -i | grep v8
+v8js
+V8 Javascript Engine => enabled
+V8 Engine Compiled Version => x.x.x
+V8 Engine Linked Version => x.x.x
+...
+```
+
